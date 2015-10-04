@@ -19,6 +19,8 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
 
+    url(r'^', include('marcador.urls')),
+
     url(r'^user/(?P<username>[-\w]+)/$', 'marcador.views.bookmark_user',
         name='marcador_bookmark_user'),
 
