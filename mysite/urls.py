@@ -22,6 +22,10 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('marcador.urls')),
+	url(r'^create/$', 'marcador.views.bookmark_create',
+        name='marcador_bookmark_create'),
+    url(r'^edit/(?P<pk>\d+)/$', 'marcador.views.bookmark_edit',
+        name='marcador_bookmark_edit'),
 ]
 
 
